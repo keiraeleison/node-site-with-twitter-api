@@ -1,29 +1,21 @@
-// Start with
-    // nodemon main --ignore db.json --> use while developing at the very beginning to evade an infinite loop
-    
+# Node Site With Twitter-API #
+
+A Node.js website that utilizes the Twitter API to search between twitter messages based on user-given keywords.
+It can also display the top searched keywords.
+
+## Start the app ##
+
+    npm install
     node main
 
+**Note**: You will need **your own Twitter API credentials** to use this app. These should never be committed to source control,
+you should store them as environment variables:
+* Create a *.env* file in the root of the application. You can base it on the sample *.env.example* file.
+* Always make sure to import the *dotenv* package (already installed) first(!) in your *main.js*:     `require('dotenv').config();`
 
-
-
-// Install Express.js
-    npm install express --save
-
-// Install Loki.js
-    npm install lokijs --save   
-
-// You will need Twitter API credentials to use this app.
-// These should never be committed to source control,
-// you should store them as environment variables:
-// create a .env file in the root of the application
-// Install dotenv
-    npminstall dotenv --save
-// Import it first in your main.js: 
-    require('dotenv').config();
-
-// Install Twitter
-    npm install twitter --save
-
-// Install EJS
-    npm install ejs --save
-    npm install express-ejs-layouts --save
+## Packages used: ##
+* express // framework for Node.js
+* ejs, express-ejs-layouts // 
+* loki // lightweight in-memory database
+* dotenv // loads environment variables from a .env file into process.env 
+* twitter // client library for the Twitter REST and Streaming API's
